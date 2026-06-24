@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FoodLens</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🍽 FoodLens</h1>
+  <p>Upload a food photo to get a nutrition breakdown and chat about what you're eating.</p>
+</header>
+
+<main>
+  <!-- Upload section -->
+  <section id="upload-section">
+    <label id="drop-zone" for="file-input">
+      <div id="drop-icon">📷</div>
+      <div id="drop-text">Drop a food photo here, or click to browse</div>
+      <img id="preview" alt="Preview" hidden>
+      <input type="file" id="file-input" accept="image/*" hidden>
+    </label>
+    <div id="upload-status" hidden></div>
+  </section>
+
+  <!-- Results section (label + chat) -->
+  <section id="results-section" hidden>
+    <div id="results-grid">
+
+      <!-- Left: Nutrition label -->
+      <div id="label-column">
+        <div id="food-name-banner"></div>
+        <div id="nutrition-label"></div>
+        <button id="new-photo-btn">📷 Try another photo</button>
+      </div>
+
+      <!-- Right: Chat -->
+      <div id="chat-column">
+        <div id="messages"></div>
+
+        <div id="chips" hidden>
+          <button class="chip" data-text="Is this healthy?">Is this healthy?</button>
+          <button class="chip" data-text="How can I make this lighter?">Lighter swaps?</button>
+          <button class="chip" data-text="How much protein is in this?">Protein breakdown</button>
+        </div>
+
+        <div id="chat-input-row">
+          <input id="chat-input" type="text" placeholder="Ask about this food…" disabled>
+          <button id="send-btn" disabled>Send</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
