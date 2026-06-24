@@ -34,6 +34,26 @@ npm start
 
 Open **http://localhost:3000** in your browser.
 
+## Screenshots
+
+### Analyzing a banana photo
+
+![Analyzing state](images/screenshots/01-analyzing.png)
+
+*The app shows the uploaded photo while the AI identifies the food and fetches nutrition data.*
+
+### Nutrition Facts label
+
+![Nutrition label](images/screenshots/02-nutrition-label.png)
+
+*FDA-style Nutrition Facts label for 1 medium banana (118g) with the opening chat message.*
+
+### Chat conversation
+
+![Chat](images/screenshots/03-chat.png)
+
+*Natural back-and-forth — the assistant references the exact nutrition numbers from the label.*
+
 ## Example walkthrough
 
 ### 1. Upload a food photo
@@ -47,53 +67,16 @@ Drop any food photo onto the upload zone or click to browse. The app will:
 
 A nutrition label appears on the left, sourced from **USDA FoodData Central** when possible, with an AI estimate as fallback.
 
-```
-Nutrition Facts
-──────────────────────────────
-1 serving per container
-Serving size   1 cup cooked (158g)
-══════════════════════════════════
-Amount per serving
-Calories                     238.6
-══════════════════════════════════
-                     % Daily Value*
-Total Fat 0.4g                   1%
-  Saturated Fat —
-  Trans Fat —
-Cholesterol —
-Sodium 7.9mg                     0%
-Total Carbohydrate 53.6g        19%
-  Dietary Fiber 1.4g             5%
-  Total Sugars —
-    Includes — Added Sugars
-Protein 5.1g                    10%
-══════════════════════════════════
-Vitamin D —     Calcium 7.9mg  1%
-Iron 0.6mg  3%  Potassium 31.6mg 1%
-──────────────────────────────
-✓ USDA data
-Estimated — not medical or clinical advice.
-```
-
 ### 3. Chat about the food
 
-The assistant opens with a natural observation. Ask anything:
+The assistant opens with a natural observation about the food. Ask anything:
 
 ```
 You:       Is this healthy?
-Assistant: It can be! The 53.6g carbs make it a solid energy source,
-           though the low fiber (1.4g) means it digests quickly.
-           Great as a base — pair it with protein and vegetables.
-
-You:       Is that a lot of carbs?
-Assistant: For one cup of white rice, 53.6g is a meaningful serving —
-           about 19% of your daily carb budget. Not extreme, but
-           worth pairing with protein if you want to stay fuller longer.
-
-You:       How can I make it lighter?
-Assistant: Swap half the rice for cauliflower rice — same volume,
-           roughly half the carbs. Or try brown rice for more fiber
-           (3.5g vs 1.4g) which slows digestion a bit.
+Assistant: Yes — a medium banana is generally a pretty healthy choice.
+           It's 105 kcal, gives you 3.1g fiber, and has a good amount
+           of potassium (422mg), which makes it a nice, filling snack
+           with natural sweetness.
 ```
 
 The full conversation history is sent on every turn, so the assistant can answer follow-ups like "is *that* a lot?" without you restating the subject.
