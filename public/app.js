@@ -352,8 +352,6 @@ async function consumeSSE(res, onToken) {
 }
 
 // ── Event wiring ──────────────────────────────────────────────────────────
-dropZone.addEventListener('click', () => fileInput.click());
-
 fileInput.addEventListener('change', () => {
   if (fileInput.files[0]) handleFile(fileInput.files[0]);
 });
